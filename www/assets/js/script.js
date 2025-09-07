@@ -73,6 +73,13 @@ class UniFiTalkRepository {
         })
     }
 
+    /**
+     * Renders a template with the provided value by dynamically updating the DOM elements
+     * and configuring them based on the template data retrieved from the cache.
+     *
+     * @param {string} value - The identifier used to retrieve the template from the cache.
+     * @return {void} This method does not return any value, instead, it manipulates the DOM.
+     */
     renderTemplate(value) {
         const template = this.cache.find(x => x.file === value);
         const container = $("#template-container");
@@ -84,10 +91,23 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
+            // Show Template Settings.
+            $("#template-settings").css("display", "block");
+
             // Set Template Alert.
             if (data.implementation !== undefined && data.implementation.version !== undefined) {
                 $("#alert").text("Congratulations 🥳, this template has been implemented since Talk version " + data.implementation.version + "!");
             }
+
+            // Set Settings.
+            if (data.settings !== undefined) {
+                if (data.settings.staticSignalingPort !== undefined) {
+                    $("#staticSignalingPort").attr("checked", (data.settings.staticSignalingPort))
+                }
+
+
+            }
+
 
             // Toggle Alert Visibility State.
             $("#alert").css("display", (data.implementation !== undefined && data.implementation.implemented === true) ? "block" : "none");
@@ -138,6 +158,15 @@ class UniFiTalkRepository {
                 container.append(domClone);
             });
 
+        } else {
+            // Hide Template Settings.
+            $("#template-settings").css("display", "none");
+
+            // Toggle Alert Visibility State.
+            $("#alert").css("display", "none");
+
+            // Hide Description Field.
+            $("#provider-description").css("display", "none");
         }
 
     }
