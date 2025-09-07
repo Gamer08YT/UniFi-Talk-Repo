@@ -84,6 +84,13 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
+            // Set Template Alert.
+            if (data.implementation !== undefined && data.implementation.version !== undefined) {
+                $("#alert").text("Congratulations 🥳, this template has been around since Talk version " + data.implementation.version + "!");
+            }
+
+            $("#alert").css("display", (data.implementation !== undefined && data.implementation.implemented === true) ? "block" : "none");
+
             // Replace Description Text.
             if (data.description !== undefined) {
                 $("#provider-description").text(data.description);

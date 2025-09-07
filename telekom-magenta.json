@@ -48,5 +48,8 @@
   "settings": {
     "static-signaling-port": true
   },
-  "implemented": true
+  "implementation": {
+    "implemented": true,
+    "version": "3.0.2"
+  }
 }
