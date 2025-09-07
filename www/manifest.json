@@ -1,13 +1,13 @@
 {
   "background_color": "#ffffff",
-  "description": "This repository provides an unofficial collection of SIP templates for UniFi Talk.",
-  "dir": "ltr",
+  "description": "This is a small collection of UniFi Talk templates, some of which have already been integrated into Talk as templates.\n\nThis site is not affiliated with Ubiquiti in any way.",
+  "dir": "auto",
   "display": "standalone",
-  "name": "gamer08yt.github",
+  "name": "UniFi Talk Repository",
   "orientation": "any",
-  "scope": "/",
-  "short_name": "gamer08yt.github",
-  "start_url": "/",
+  "scope": "/UniFi-Talk-Repo/",
+  "short_name": "UniFi Talk Repo",
+  "start_url": "/UniFi-Talk-Repo/",
   "theme_color": "#157878",
   "icons": [
     {
