@@ -94,15 +94,6 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
-            // Display ACL Whitelist.
-            const acl = data.aclWhitelist;
-
-            if (acl !== undefined) {
-                acl.forEach(element => {
-                    this.appendAndCloneTemplateACL(element);
-                });
-            }
-
             // Show Template Settings.
             $("#template-settings").css("display", "block");
 
@@ -141,6 +132,15 @@ class UniFiTalkRepository {
                     console.log(element);
 
                     this.appendAndCloneTemplateField(element);
+                });
+            }
+
+            // Display ACL Whitelist.
+            const acl = data.aclWhitelist;
+
+            if (acl !== undefined) {
+                acl.forEach(element => {
+                    this.appendAndCloneTemplateACL(element);
                 });
             }
 
@@ -228,6 +228,14 @@ class UniFiTalkRepository {
         return domClone;
     }
 
+    /**
+     * Appends a new ACL (Access Control List) template element to the container and clones its structure for further usage.
+     *
+     * @param {Object} element - The object containing the values for the ACL template.
+     * @param {string} element.host - The host value to populate in the cloned ACL template.
+     * @param {number} element.cidr - The CIDR value to populate in the cloned ACL template.
+     * @return {Object} The cloned and appended DOM element.
+     */
     appendAndCloneTemplateACL(element) {
         const container = $("#template-container");
 
@@ -241,7 +249,7 @@ class UniFiTalkRepository {
         inputContainer.empty();
 
         // Append new inner.
-        inputContainer.append("<div class='row'><input type='text' class='col-sm-10 form-control template-form-input' disabled placeholder='Host'><input type='number' disabled class='col-sm-2 form-control template-form-input' placeholder='CIDR'></div>");
+        inputContainer.append("<div class='row'><div class='col-sm-10'><input type='text' value='" + element.host + "' class='form-control template-form-input' disabled placeholder='Host'></div><div class='col-sm-2'><input type='number' value='" + element.cidr + "' disabled class='form-control template-form-input' placeholder='CIDR'></div></div>");
 
         // Append Dom Clone to Wrapper.
         container.append(domClone);
