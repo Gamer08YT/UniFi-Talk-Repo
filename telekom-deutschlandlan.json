@@ -1,0 +1,75 @@
+{
+  "name": "Deutsche Telekom - Magenta",
+  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with Magenta plan connections.",
+  "fields": [
+    {
+      "name": "realm",
+      "value": "sip-trunk.telekom.de"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "password",
+      "description": "<Telefoniepasswort>"
+    },
+    {
+      "name": "username",
+      "description": "<Telefoniebenutzer, it is a 12 digit number>"
+    },
+    {
+      "name": "extension",
+      "value": "auto_to_user"
+    },
+    {
+      "name": "from-user",
+      "description": "+49YOURMAINNUMBER"
+    },
+    {
+      "name": "from-domain",
+      "value": "sip-trunk.telekom.de"
+    },
+    {
+      "name": "sip-cid-type",
+      "value": "rpid"
+    },
+    {
+      "name": "retry-seconds",
+      "value": 10
+    },
+    {
+      "name": "caller-id-type",
+      "value": "rpid"
+    },
+    {
+      "name": "expire-seconds",
+      "value": 120
+    },
+    {
+      "name": "outbound-proxy",
+      "value": "reg.sip-trunk.telekom.de"
+    },
+    {
+      "name": "register-proxy",
+      "value": "reg.sip-trunk.telekom.de"
+    },
+    {
+      "name": "register-transport",
+      "value": "tcp"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "217.0.0.0",
+      "cidr": "8"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": true
+  },
+  "meta": {
+    "author": "folkewallrodt",
+    "source": "https://community.ui.com/questions/Unifi-Talk-Profile-Telekom-DeutschlandLAN-SIP-Trunk/f5147264-710b-45a9-b278-276e98a0455e"
+  }
+}
