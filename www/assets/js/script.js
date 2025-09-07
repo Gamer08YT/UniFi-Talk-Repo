@@ -87,6 +87,9 @@ class UniFiTalkRepository {
         // First, clear old renders.
         container.empty();
 
+        // Hide Codec by Default.
+        $("#codec").css("display", "none");
+
         // Check if template is in cache.
         if (template !== undefined) {
             const data = template.data;
@@ -105,7 +108,10 @@ class UniFiTalkRepository {
                     $("#staticSignalingPort").attr("checked", (data.settings.staticSignalingPort))
                 }
 
-
+                if (data.settings.codec !== undefined) {
+                    $("#codec").css("display", "block");
+                    $("#codec").text("⚠️ You need to use the " + data.settings.codec + " codec for this template.")
+                }
             }
 
 
