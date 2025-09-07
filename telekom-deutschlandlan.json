@@ -1,6 +1,6 @@
 {
-  "name": "Deutsche Telekom - Magenta",
-  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with Magenta plan connections.",
+  "name": "Deutsche Telekom - DeutschlandLAN",
+  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with DeutschlandLAN (Business) plan connections.",
   "fields": [
     {
       "name": "realm",
