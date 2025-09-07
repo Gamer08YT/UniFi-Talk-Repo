@@ -18,7 +18,7 @@
       "value": "sip.arcor.de"
     }
   ],
-  "acl-whitelist": [
+  "aclWhitelist": [
     {
       "host": "0.0.0.0",
       "cidr": "0"

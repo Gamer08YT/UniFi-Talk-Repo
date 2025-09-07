@@ -39,14 +39,14 @@
       "value": 480
     }
   ],
-  "acl-whitelist": [
+  "aclWhitelist": [
     {
       "host": "217.0.0.0",
       "cidr": "8"
     }
   ],
   "settings": {
-    "static-signaling-port": true
+    "staticSignalingPort": true
   },
   "implementation": {
     "implemented": true,
