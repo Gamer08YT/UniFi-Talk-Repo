@@ -1,0 +1,29 @@
+# .github/workflows/deploy.yml
+
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'www/**'
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./www
