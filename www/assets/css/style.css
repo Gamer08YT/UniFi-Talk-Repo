@@ -12,7 +12,16 @@ body, html {
     font-family: UI Sans, Lato, Arial, sans-serif;
 }
 
-span {
+footer {
+    color: var(--secondary-text) !important;
+    background-color: var(--secondary-color) !important;
+}
+
+footer > p {
+    color: var(--primary-text) !important;
+}
+
+span, p {
     color: var(--secondary-text);
 }
 

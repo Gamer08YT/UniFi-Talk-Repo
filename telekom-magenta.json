@@ -16,7 +16,7 @@
     },
     {
       "name": "auth-username",
-      "description": "Associated or created T-Online, email, or alternatively <phone number>@t-online.de. According to the Telekom Community, <customer number>@t-online.de can also be used."
+      "description": "Associated or created T-Online, email, or alternatively &lt;phone number&gt;@t-online.de. According to the Telekom Community, &lt;customer number&gt;@t-online.de can also be used."
     },
     {
       "name": "password",
