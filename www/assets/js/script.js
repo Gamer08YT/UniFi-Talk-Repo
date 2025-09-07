@@ -84,6 +84,14 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
+            // Replace Description Text.
+            if (data.description !== undefined) {
+                $("#provider-description").text(data.description);
+            }
+
+            // Show or hide Description Field.
+            $("#provider-description").css("display", (data.description !== undefined ? "block" : "none"));
+
             // Render Fields.
             data.fields.forEach(element => {
                 console.log(element);

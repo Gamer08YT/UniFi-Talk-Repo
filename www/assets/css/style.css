@@ -38,3 +38,12 @@ select, input {
 .template-elements {
     display: none;
 }
+
+.collapse > .card, .collapsing > .card {
+    background-color: var(--secondary-color) !important;
+    color: var(--primary-text) !important;
+}
+
+.collapse.show {
+    padding-bottom: 1rem;
+}

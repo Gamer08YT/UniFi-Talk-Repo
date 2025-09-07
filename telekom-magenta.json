@@ -47,5 +47,6 @@
   ],
   "settings": {
     "static-signaling-port": true
-  }
+  },
+  "implemented": true
 }

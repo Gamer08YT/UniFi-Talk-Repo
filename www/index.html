@@ -12,35 +12,130 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
-<body>
-<div class="container" id="site-container">
-    <!-- START: Content -->
-    <br>
-    <h1>UniFi Talk Repo</h1>
+<body class="d-flex flex-column min-vh-100">
+<main class="flex-grow-1">
+    <div class="container" id="site-container">
+        <!-- START: Content -->
+        <br>
+        <h1>UniFi Talk Repo</h1>
+        <p>This is a small collection of UniFi Talk templates, some of which have already been integrated into Talk as
+            templates.</p>
+        <p>Select a template to view the configuration.</p><br>
 
-    <span>Select a template to view the configuration.</span><br><br>
-    <div class="mb-3 row">
-        <label class="col-sm-2 col-form-label">Provider</label>
-        <div class="col-sm-10">
-            <select class="form-select" id="provider-select" aria-label="Select Provider">
-                <option selected>None</option>
-            </select>
-        </div>
-    </div>
-    <div class="template-elements">
-        <div class="mb-3 row" id="template-input">
-            <label class="col-sm-2 col-form-label">{%title%}</label>
-            <div class="col-sm-10 template-form-input">
-                <input type="text" class="form-control">
+        <!-- START: Contribute -->
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contribute"
+                    aria-expanded="false" aria-controls="contribute">
+                How to contribute?
+            </button>
+        </p>
+        <div>
+            <div class="collapse" id="contribute">
+                <div class="card card-body">
+                    <span>If you have a template that does not yet exist here or in Talk, you are welcome to add it to the repository.</span>
+
+                    <p>
+                        First you need to create a fork of this repository. <br>
+                        <a href="https://github.com/Gamer08YT/UniFi-Talk-Repo/fork">Click here</a> to create a fork.
+                    </p>
+                    <p>
+                        Then you can push a new JSON template. You can use the existing templates as a guide. When
+                        you're
+                        done, just start a pull request.
+                    </p>
+                </div>
             </div>
         </div>
+        <!-- END: Contribute -->
+
+        <!-- START: UniFi-Talk -->
+        <p>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#release"
+                    aria-expanded="false" aria-controls="release">
+                Will the template added into UniFi-Talk?
+            </button>
+        </p>
+        <div>
+            <div class="collapse" id="release">
+                <div class="card card-body">
+                    <p>If you are interested, I will gladly forward your template to the appropriate department at UI so
+                        that it can be implemented.</p>
+                    <p>However, the template must then be validated by UI for accuracy and functionality, which is why
+                        we
+                        need you and your connection.</p>
+                    <br>
+                    <b>The whole process works as follows:</b>
+                    <br><br>
+                    <ol>
+                        <li>You invite “unifitalk@ui.com” as an admin for UniFi Talk on your console.</li>
+
+                        <li>You tell me the Name of your console (don't worry, I can't do anything with it, it's just
+                            for
+                            clarity for the UI developers); the ID is at the top of the URL when you open an application
+                            via
+                            the site manager.
+                        </li>
+
+                        <li>Ubiquiti will contact you either by email or on the official UI forum, whichever you prefer.
+                        </li>
+
+                        <li>In the penultimate step, UI may install a custom Talk version that only you and the
+                            developers
+                            have.
+                        </li>
+
+                        <li>Finally, UI will make a few calls (to toll-free numbers, of course; you can also specify
+                            preferred numbers) to verify that the template actually works before it is released.
+                        </li>
+                    </ol>
+
+                    <p>
+                        You can contact me on the Unofficial Community forum: <a
+                            href="https://ubiquiti-networks-forum.de/user/115-jaxnprivate/">ubiquiti-networks-forum.de</a>,
+                        the
+                        Official Ubiquiti forum: <a
+                            href="https://community.ui.com/user/JaXnPublic/a521c964-0aba-4ad4-89aa-b42b5066e8a5">community.ui.com</a>
+                        or you just open an issue on <a
+                            href="https://github.com/Gamer08YT/UniFi-Talk-Repo/issues">GitHub</a>.
+                    </p>
+
+                    <p>
+                        <b>
+                            I accept no liability for damage or loss, as I am merely referring you to UI. I always
+                            recommend
+                            making a backup.
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- END: Contribute -->
+
+        <br>
+        <div class="mb-3 row">
+            <label class="col-sm-2 col-form-label">Provider</label>
+            <div class="col-sm-10">
+                <select class="form-select" id="provider-select" aria-label="Select Provider">
+                    <option selected>None</option>
+                </select>
+                <span id="provider-description" style="display: none;" class="helper-text"></span>
+            </div>
+        </div>
+        <div class="template-elements">
+            <div class="mb-3 row" id="template-input">
+                <label class="col-sm-2 col-form-label">{%title%}</label>
+                <div class="col-sm-10 template-form-input">
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+        <div id="template-container"></div>
+        <!-- END: Content -->
     </div>
-    <div id="template-container"></div>
-    <!-- END: Content -->
-</div>
+</main>
 
 <!-- START: Footer -->
-<footer class="py-3 fixed-bottom">
+<footer class="py-3 mt-auto">
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
         <li class="nav-item"><a href="https://www.byte-store.de/" class="nav-link px-2">Sponsor</a></li>
         <li class="nav-item"><a href="https://github.com/Gamer08YT/UniFi-Talk-Repo" class="nav-link px-2">GitHub</a>
@@ -52,6 +147,7 @@
     <p class="text-center">© 2025 Jan Heil (<a href="https://www.byte-store.de/">www.byte-store.de</a>)</p>
 </footer>
 <!-- END: Footer -->
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
