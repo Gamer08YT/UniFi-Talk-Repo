@@ -1,0 +1,31 @@
+:root {
+    --primary-text: #c0ecfa;
+    --secondary-text: #c7c9cc;
+    --link-text: #2777d5;
+    --primary-color: #131416;
+    --secondary-color: #232426;
+}
+
+body, html {
+    color: var(--primary-text) !important;
+    background-color: var(--primary-color) !important;
+    font-family: UI Sans, Lato, Arial, sans-serif;
+}
+
+span {
+    color: var(--secondary-text);
+}
+
+select {
+    color: var(--primary-text) !important;
+}
+
+select, input {
+    color: var(--secondary-text) !important;
+    background-color: var(--secondary-color) !important;
+    border-color: var(--secondary-color) !important;
+}
+
+.template-elements {
+    /*display: none;*/
+}
