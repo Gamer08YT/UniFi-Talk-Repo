@@ -237,7 +237,11 @@ class UniFiTalkRepository {
         // Change Input Container of Clone.
         const inputContainer = domClone.children("div");
 
-        inputContainer.append("<div class='row'><input type='text' class='col-sm-10 template-form-input' placeholder='Host'><input type='text' class='col-sm-2 template-form-input' placeholder='CIDR'></div>");
+        // Clear inner HTML.
+        inputContainer.empty();
+
+        // Append new inner.
+        inputContainer.append("<div class='row'><input type='text' class='col-sm-10 form-control template-form-input' disabled placeholder='Host'><input type='number' disabled class='col-sm-2 form-control template-form-input' placeholder='CIDR'></div>");
 
         // Append Dom Clone to Wrapper.
         container.append(domClone);
