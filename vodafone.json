@@ -27,5 +27,8 @@
   "settings": {
     "static-signaling-port": false,
     "codec": "PCMA"
+  },
+  "meta": {
+    "author": "Mem"
   }
 }

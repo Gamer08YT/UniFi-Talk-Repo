@@ -51,5 +51,8 @@
   "implementation": {
     "implemented": true,
     "version": "3.0.2"
+  },
+  "meta": {
+    "author": "JaXnPriVate"
   }
 }
