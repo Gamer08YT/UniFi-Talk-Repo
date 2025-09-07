@@ -24,7 +24,7 @@
     },
     {
       "name": "username",
-      "description": "Phone number to be used"
+      "description": "Phone number to be used (+49...)"
     },
     {
       "name": "from-domain",
