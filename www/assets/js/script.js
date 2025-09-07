@@ -113,7 +113,9 @@ class UniFiTalkRepository {
 
                 // Add Helper Text if exists.
                 if (element.description !== undefined) {
-                    domClone.children(".template-form-input").append("<span class='helper-text'>" + element.description + "</span>");
+                    const inputForm = domClone.children(".template-form-input");
+                    inputForm.append("<span class='helper-text'></span>");
+                    inputForm.children(".helper-text").text(element.description);
                 }
 
                 // Append Dom Clone to Wrapper.
