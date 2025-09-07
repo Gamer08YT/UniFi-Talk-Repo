@@ -1,1 +1,51 @@
-
+{
+  "name": "Deutsche Telekom - Magenta",
+  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with Magenta plan connections.",
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "tel.t-online.de"
+    },
+    {
+      "name": "realm",
+      "value": "tel.t-online.de"
+    },
+    {
+      "name": "context",
+      "value": "public"
+    },
+    {
+      "name": "auth-username",
+      "description": "Associated or created T-Online, email, or alternatively <phone number>@t-online.de. According to the Telekom Community, <customer number>@t-online.de can also be used."
+    },
+    {
+      "name": "password",
+      "description": "Your T-Online or Customer Dashboard Password"
+    },
+    {
+      "name": "username",
+      "description": "Phone number to be used"
+    },
+    {
+      "name": "from-domain",
+      "value": "tel.t-online.de"
+    },
+    {
+      "name": "retry-seconds",
+      "value": 30
+    },
+    {
+      "name": "expire-seconds",
+      "value": 480
+    }
+  ],
+  "acl-whitelist": [
+    {
+      "host": "217.0.0.0",
+      "cidr": "8"
+    }
+  ],
+  "settings": {
+    "static-signaling-port": true
+  }
+}
