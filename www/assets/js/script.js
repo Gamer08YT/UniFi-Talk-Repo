@@ -1,19 +1,29 @@
 class UniFiTalkRepository {
     container = "template-container";
+    cache = [];
 
     /**
-     * Loads a template file from a pre-defined GitHub repository and logs its content
-     * and the file name to the console.
+     * Loads a template from the provided file path using a GET request to the GitHub API
+     * and caches the response data. Also updates a dropdown menu with the fetched template's name.
      *
-     * @param {string} fileIO - The name of the file to load from the GitHub repository.
-     * @return {void} This method does not return any value.
+     * @param {string} fileIO The path of the file to be loaded, appended to a predefined base URL.
+     * @return {void} Does not return a value.
      */
     loadTemplate(fileIO) {
-        const url = "https://raw.githubusercontent.com/Gamer08YT/UniFi-Talk-Repo/refs/heads/main/" + fileIO
+        const url = "https://raw.githubusercontent.com/Gamer08YT/UniFi-Talk-Repo/main/" + fileIO
 
         // Get Request to GitHub API.
-        $.get(url, (data) => {
+        $.get(url, (response) => {
+            const data = JSON.parse(response);
+
             console.log(data);
+            if (data.name !== undefined) {
+                // Add Option to Select.
+                $("#provider-select").append(new Option(data.name, fileIO));
+            }
+
+            // Push Template into Cache.
+            this.cache.push({file: fileIO, data: data});
         })
 
         console.log("Loading Template: " + fileIO);
@@ -40,12 +50,79 @@ class UniFiTalkRepository {
         });
     }
 
+    /**
+     * Initializes a new instance of the class and loads the UniFi Talk Repository.
+     * Executes the necessary setup by invoking the `fetchTemplates` method.
+     *
+     * @return {void} Does not return a value.
+     */
     constructor() {
         console.log("Loading UniFi Talk Repository");
 
         this.fetchTemplates();
+        this.registerListeners();
     }
 
+    /**
+     **/
+    registerListeners() {
+        $("#provider-select").change((data) => {
+            const value = data.target.value;
+
+            this.renderTemplate(value);
+        })
+    }
+
+    renderTemplate(value) {
+        const template = this.cache.find(x => x.file === value);
+        const container = $("#template-container");
+
+        // First, clear old renders.
+        container.empty();
+
+        // Check if template is in cache.
+        if (template !== undefined) {
+            const data = template.data;
+
+            // Render Fields.
+            data.fields.forEach(element => {
+                console.log(element);
+
+                // Add a new Field Wrapper.
+                const domClone = $("#template-input").clone();
+
+                // Edit ID Field of clone.
+                domClone.attr("id", element.name);
+
+                // Change Label of Clone.
+                domClone.children("label").text(element.name);
+
+                // Change Input of Clone.
+                const input = domClone.children("div").children("input");
+
+                // Set Value of Input if defined.
+                if (element.value !== undefined) {
+                    input.val(element.value);
+                    input.attr("disabled", "disabled");
+                }
+
+                // Set Placeholder of Input if defined.
+                if (element.placeholder !== undefined) {
+                    input.attr("placeholder", element.placeholder);
+                }
+
+                // Add Helper Text if exists.
+                if (element.description !== undefined) {
+                    domClone.children(".template-form-input").append("<span class='helper-text'>" + element.description + "</span>");
+                }
+
+                // Append Dom Clone to Wrapper.
+                container.append(domClone);
+            });
+
+        }
+
+    }
 }
 
 // Wait until document is ready.
