@@ -94,6 +94,15 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
+            // Display ACL Whitelist.
+            const acl = data.aclWhitelist;
+
+            if (acl !== undefined) {
+                acl.forEach(element => {
+                    this.appendAndCloneTemplateACL(element);
+                });
+            }
+
             // Show Template Settings.
             $("#template-settings").css("display", "block");
 
@@ -127,42 +136,13 @@ class UniFiTalkRepository {
             $("#provider-description").css("display", (data.description !== undefined ? "block" : "none"));
 
             // Render Fields.
-            data.fields.forEach(element => {
-                console.log(element);
+            if (data.fields !== undefined) {
+                data.fields.forEach(element => {
+                    console.log(element);
 
-                // Add a new Field Wrapper.
-                const domClone = $("#template-input").clone();
-
-                // Edit ID Field of clone.
-                domClone.attr("id", element.name);
-
-                // Change Label of Clone.
-                domClone.children("label").text(element.name);
-
-                // Change Input of Clone.
-                const input = domClone.children("div").children("input");
-
-                // Set Value of Input if defined.
-                if (element.value !== undefined) {
-                    input.val(element.value);
-                    input.attr("disabled", "disabled");
-                }
-
-                // Set Placeholder of Input if defined.
-                if (element.placeholder !== undefined) {
-                    input.attr("placeholder", element.placeholder);
-                }
-
-                // Add Helper Text if exists.
-                if (element.description !== undefined) {
-                    const inputForm = domClone.children(".template-form-input");
-                    inputForm.append("<span class='helper-text'></span>");
-                    inputForm.children(".helper-text").text(element.description);
-                }
-
-                // Append Dom Clone to Wrapper.
-                container.append(domClone);
-            });
+                    this.appendAndCloneTemplateField(element);
+                });
+            }
 
         } else {
             // Hide Template Settings.
@@ -175,6 +155,94 @@ class UniFiTalkRepository {
             $("#provider-description").css("display", "none");
         }
 
+    }
+
+    /**
+     * Appends a new field wrapper by cloning a template field and modifying its properties
+     * based on the provided element configuration.
+     *
+     * @param {Object} element - Configuration for the field to append.
+     * @param {string} element.name - The name attribute of the field.
+     * @param {string} [element.value] - The default value to set for the field. If provided, the field will be disabled.
+     * @param {string} [element.placeholder] - The placeholder text for the field.
+     * @param {string} [element.description] - Additional helper text to display below the field.
+     * @return {Object} The DOM clone of the appended field.
+     */
+    appendAndCloneTemplateField(element) {
+        const container = $("#template-container");
+
+        // Add a new Field Wrapper.
+        const domClone = this.getBasicField(element.name);
+
+        // Change Input of Clone.
+        const input = domClone.children("div").children("input");
+
+        // Set Value of Input if defined.
+        if (element.value !== undefined) {
+            input.val(element.value);
+            input.attr("disabled", "disabled");
+        }
+
+        // Set Placeholder of Input if defined.
+        if (element.placeholder !== undefined) {
+            input.attr("placeholder", element.placeholder);
+        }
+
+        // Add Helper Text if exists.
+        if (element.description !== undefined) {
+            const inputForm = domClone.children(".template-form-input");
+            inputForm.append("<span class='helper-text'></span>");
+            inputForm.children(".helper-text").text(element.description);
+        }
+
+        // Append Dom Clone to Wrapper.
+        container.append(domClone);
+
+        return domClone;
+    }
+
+    /**
+     * Clones the element with the ID `template-input` and returns the cloned element.
+     *
+     * @return {jQuery} A jQuery object containing the cloned template element.
+     */
+    getCloneTemplate() {
+        return $("#template-input").clone();
+    }
+
+    /**
+     * Retrieves a basic field element by cloning a template and modifying its properties.
+     *
+     * @param {string} name - The name to assign to the ID attribute of the cloned element, as well as the text content of its label.
+     * @return {Object} A jQuery DOM element representing the modified clone.
+     */
+    getBasicField(name) {
+        const domClone = this.getCloneTemplate();
+
+        // Edit ID Field of clone.
+        domClone.attr("id", name);
+
+        // Change Label of Clone.
+        domClone.children("label").text(name);
+
+        return domClone;
+    }
+
+    appendAndCloneTemplateACL(element) {
+        const container = $("#template-container");
+
+        // Add a new Field Wrapper.
+        const domClone = this.getBasicField("ACL");
+
+        // Change Input Container of Clone.
+        const inputContainer = domClone.children("div");
+
+        inputContainer.append("<div class='row'><input type='text' class='col-sm-10 template-form-input' placeholder='Host'><input type='text' class='col-sm-2 template-form-input' placeholder='CIDR'></div>");
+
+        // Append Dom Clone to Wrapper.
+        container.append(domClone);
+
+        return domClone;
     }
 }
 
