@@ -4,7 +4,7 @@
   "fields": [
     {
       "name": "proxy",
-      "description": "Proxy is <Area code>.sip.arcor.de"
+      "description": "Proxy is <Area code>.sip.arcor.de, may also contain other domains depending on location, e.g., kabelfon.vodafone.de or telefon.unitymedia.de..."
     },
     {
       "name": "password"
