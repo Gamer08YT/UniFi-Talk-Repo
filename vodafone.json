@@ -15,7 +15,8 @@
     },
     {
       "name": "from-domain",
-      "value": "sip.arcor.de"
+      "value": "sip.arcor.de",
+      "description": "May also contain other domains depending on location, e.g., kabelfon.vodafone.de or telefon.unitymedia.de..."
     }
   ],
   "aclWhitelist": [
