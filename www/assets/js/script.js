@@ -144,6 +144,14 @@ class UniFiTalkRepository {
                 });
             }
 
+            // Replace Meta Text if not undefined.
+            if (data.meta != undefined) {
+                // Handle Template User Mention/Credits.
+                $("#mention").html("🎉 This template comes from " + data.meta.author + (data.meta.source !== undefined ? ", <a href='" + data.meta.source + "'>the original post can be found here.</a>" : "."));
+            }
+
+            // Show or hide Mention Alert based on Meta.
+            $("#mention").css("display", (data.meta !== undefined ? "block" : "none"));
         } else {
             // Hide Template Settings.
             $("#template-settings").css("display", "none");
