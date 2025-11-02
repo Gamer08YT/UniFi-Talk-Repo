@@ -1,6 +1,7 @@
 class UniFiTalkRepository {
     container = "template-container";
     cache = [];
+    needToLoad = 0;
 
     /**
      * Loads a template from the provided file path using a GET request to the GitHub API
@@ -24,6 +25,14 @@ class UniFiTalkRepository {
 
             // Push Template into Cache.
             this.cache.push({file: fileIO, data: data});
+
+            console.log(this.cache.length);
+            console.log(this.needToLoad);
+
+            if (this.cache.length === this.needToLoad) {
+                // Execute Callback if exists.
+                this.loadedCallback();
+            }
         })
 
         console.log("Loading Template: " + fileIO);
@@ -40,6 +49,13 @@ class UniFiTalkRepository {
 
         // Get Request to GitHub API.
         $.get(url, (data) => {
+            data.forEach(element => {
+                if (element.name.endsWith(".json")) {
+                    this.needToLoad++;
+                }
+            })
+
+
             data.forEach(element => {
                 if (element.name.endsWith(".json")) {
                     this.loadTemplate(element.name);
@@ -61,6 +77,8 @@ class UniFiTalkRepository {
 
         this.fetchTemplates();
         this.registerListeners();
+
+        this.handleParams();
     }
 
     /**
@@ -263,6 +281,52 @@ class UniFiTalkRepository {
         container.append(domClone);
 
         return domClone;
+    }
+
+    /**
+     * Handles URL parameters to determine if a specific template parameter is present.
+     * If the `template` parameter exists, it sets up a callback to render the specified template.
+     *
+     * @return {void} Does not return any value.
+     */
+    handleParams() {
+        const query = window.location.search;
+        const urlParams = new URLSearchParams(query);
+
+        if (urlParams.get("template") !== null) {
+            console.log(`Found Param for Template ${urlParams.get("template")}.`);
+
+            this.loadedCallback = () => {
+                const template = urlParams.get("template") + ".json";
+
+                // Print Debug Message.
+                console.log(`Showing Template: ${template}.`);
+
+                // Show Template.
+                this.renderTemplate(template);
+
+                // Set Selected.
+                this.setSelected(template)
+            }
+        }
+    }
+
+    /**
+     * Sets the specified template as the selected option in a dropdown menu
+     * and deselects all other options.
+     *
+     * @param {string} template - The value of the option to be selected.
+     * @return {void} This method does not return a value.
+     */
+    setSelected(template) {
+        // Deselect All Options.
+        $('#provider-select option').removeAttr('selected');
+
+        // Select correct Option.
+        $("#provider-select option[value='" + template + "']").attr('selected', true);
+
+        // Print Debug Message.
+        console.log(`Selected Template: ${template}.`);
     }
 }
 
