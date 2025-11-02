@@ -348,7 +348,12 @@ class UniFiTalkRepository {
 
         // Publish the updated URL to the parent window (Unofficial Ubiquiti Networks Forum).
         if (window.parent !== undefined)
-            window.parent.postMessage({author: "Jan Heil", type: "success", sync: {template: template}}, '*');
+            window.parent.postMessage({
+                author: "Jan Heil",
+                source: "unifi-talk-repository",
+                type: "success",
+                sync: {template: template}
+            }, '*');
 
         // Update the address bar (without reloading)
         window.history.replaceState({}, '', url);
