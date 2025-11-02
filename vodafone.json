@@ -29,6 +29,9 @@
     "staticSignalingPort": false,
     "codec": "PCMA"
   },
+  "implementation": {
+    "submitted": true
+  },
   "meta": {
     "author": "Mem",
     "source": "https://ubiquiti-networks-forum.de/board/thread/9200-unifi-talk-hardware-release-deutschland/?postID=156359#post156359"

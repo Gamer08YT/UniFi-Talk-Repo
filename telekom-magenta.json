@@ -49,6 +49,7 @@
     "staticSignalingPort": true
   },
   "implementation": {
+    "submitted": true,
     "implemented": true,
     "version": "3.0.2"
   },
