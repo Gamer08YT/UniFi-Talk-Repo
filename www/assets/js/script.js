@@ -26,9 +26,6 @@ class UniFiTalkRepository {
             // Push Template into Cache.
             this.cache.push({file: fileIO, data: data});
 
-            console.log(this.cache.length);
-            console.log(this.needToLoad);
-
             if (this.cache.length === this.needToLoad) {
                 // Execute Callback if exists.
                 this.loadedCallback();
@@ -141,7 +138,7 @@ class UniFiTalkRepository {
 
 
             // Toggle Alert Visibility State.
-            $("#alert").css("display", (data.implementation !== undefined && data.implementation.implemented === true) ? "block" : "none");
+            $("#alert").css("display", (data.implementation !== undefined && (data.implementation.implemented === true || data.implementation.submitted === true)) ? "block" : "none");
 
             // Replace Description Text.
             if (data.description !== undefined) {
