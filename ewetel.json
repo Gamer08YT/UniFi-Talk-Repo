@@ -37,25 +37,15 @@
       "description": "Username is <Area code> without + <Phone number>"
     },
     {
-      "name": "retry_seconds",
-      "value": 30
-    },
-    {
-      "name": "expire-seconds",
-      "value": 120
-    },
-    {
       "name": "outbound-proxy",
       "value": "sipreg3.voice.ewetel.de",
       "description": "May also contain other domains."
-    },
+    }
+  ],
+  "aclWhitelist": [
     {
-      "name": "sip-server-port",
-      "value": 5060
-    },
-    {
-      "name": "caller-id-in-form",
-      "value": true
+      "host": "85.16.254.0",
+      "cidr": "24"
     }
   ],
   "meta": {
