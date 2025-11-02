@@ -1,0 +1,65 @@
+{
+  "name": "EWE Tel",
+  "description": "SIP template for EWE Tel GmbH.",
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "sipreg3.voice.ewetel.de",
+      "description": "May also contain other domains."
+    },
+    {
+      "name": "realm",
+      "value": "sipreg3.voice.ewetel.de",
+      "description": "May also contain other domains."
+    },
+    {
+      "name": "context",
+      "value": "public"
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "description": "Username is <Area code> without + <Phone number>"
+    },
+    {
+      "name": "from-domain",
+      "value": "sipreg3.voice.ewetel.de",
+      "description": "May also contain other domains."
+    },
+    {
+      "name": "auth-username",
+      "description": "Username is <Area code> without + <Phone number>"
+    },
+    {
+      "name": "retry_seconds",
+      "value": 30
+    },
+    {
+      "name": "expire-seconds",
+      "value": 120
+    },
+    {
+      "name": "outbound-proxy",
+      "value": "sipreg3.voice.ewetel.de",
+      "description": "May also contain other domains."
+    },
+    {
+      "name": "sip-server-port",
+      "value": 5060
+    },
+    {
+      "name": "caller-id-in-form",
+      "value": true
+    }
+  ],
+  "meta": {
+    "author": "Battlecliff",
+    "source": "https://community.ui.com/questions/EweTel-Sip-Unifi-Talk/b8f8f229-5861-47ff-b9cf-381959100ce7#answer/5f369d31-5bd2-47ae-840a-0579b2f4d4a6"
+  }
+}
