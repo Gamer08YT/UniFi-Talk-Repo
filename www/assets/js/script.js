@@ -118,9 +118,13 @@ class UniFiTalkRepository {
             // Show Template Settings.
             $("#template-settings").css("display", "block");
 
-            // Set Template Alert.
-            if (data.implementation !== undefined && data.implementation.version !== undefined) {
-                $("#alert").text("Congratulations 🥳, this template has been implemented since Talk version " + data.implementation.version + "!");
+            // Set Template Alert if Implemented.
+            if (data.implementation !== undefined) {
+                if (data.implementation.version !== undefined && data.implementation.implemented === true) {
+                    $("#alert").text("Congratulations 🥳, this template has been implemented since Talk version " + data.implementation.version + "!");
+                } else if (data.implementation.submitted !== undefined) {
+                    $("#alert").text("The template has been submitted. 🙏");
+                }
             }
 
             // Set Settings.
