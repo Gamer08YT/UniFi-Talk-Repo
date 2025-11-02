@@ -74,7 +74,6 @@ class UniFiTalkRepository {
 
         this.fetchTemplates();
         this.registerListeners();
-
         this.handleParams();
     }
 
@@ -342,14 +341,20 @@ class UniFiTalkRepository {
     updateURL(value) {
         // Create a URL object from the current page
         const url = new URL(window.location);
+        const template = value.replaceAll(".json", "");
 
         // Set or update the "template" parameter
-        url.searchParams.set('template', value.replaceAll(".json", ""));
+        url.searchParams.set('template', template);
+
+        // Publish the updated URL to the parent window (Unofficial Ubiquiti Networks Forum).
+        if (window.parent !== undefined)
+            window.parent.postMessage({author: "Jan Heil", type: "success", sync: {template: template}}, '*');
 
         // Update the address bar (without reloading)
         window.history.replaceState({}, '', url);
 
     }
+
 }
 
 // Wait until document is ready.
