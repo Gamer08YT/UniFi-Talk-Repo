@@ -347,7 +347,7 @@ class UniFiTalkRepository {
         url.searchParams.set('template', template);
 
         // Publish the updated URL to the parent window (Unofficial Ubiquiti Networks Forum).
-        if (window.parent !== undefined)
+        if (window.parent !== undefined) {
             window.parent.postMessage({
                 author: "Jan Heil",
                 source: "unifi-talk-repository",
@@ -355,8 +355,10 @@ class UniFiTalkRepository {
                 sync: {template: template}
             }, '*');
 
-        // Update the address bar (without reloading)
+            console.log("Published Template to Parent Window.");
+        }
 
+        // Update the address bar (without reloading)
         window.history.replaceState({}, '', url);
 
         // Print Debug Message.

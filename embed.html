@@ -1,0 +1,50 @@
+<!-- To embed the talk repo in another website, use the following code: -->
+<iframe
+        id="talk-repo"
+        name="talk-repo"
+        width="100%"
+        height="1920px"
+        src="https://gamer08yt.github.io/UniFi-Talk-Repo/"
+        scrolling="yes"
+        marginwidth="0"
+        marginheight="0"
+        style="border:0px solid #ffffff;">
+</iframe>
+
+
+<!-- To sync the template param from the parent page to the iframe, use the following code: -->
+<script>
+    // Aktuelle URL-Parameter abrufen
+    const params = new URLSearchParams(window.location.search);
+
+    // Prüfen, ob "template" vorhanden ist
+    if (params.has('template')) {
+        const templateValue = params.get('template');
+
+        // iFrame-Element holen
+        const iframe = document.getElementById('talk-repo');
+
+        // Bestehende src-URL erweitern
+        iframe.src = `https://gamer08yt.github.io/UniFi-Talk-Repo/?template=${encodeURIComponent(templateValue)}`;
+    }
+</script>
+
+
+<!-- To sync the template param from the iframe to the parent page, use the following code: -->
+<script>
+    window.addEventListener('message', (event) => {
+        if (event.data && event.data.sync !== undefined && event.origin === 'https://gamer08yt.github.io') {
+            console.log(`Recv. Iframe Message ${JSON.stringify(event.data)}.`);
+
+            const newUrl = new URL(window.location.href);
+            const template = event.data.sync.template;
+
+            if (template) {
+                newUrl.searchParams.set('template', template);
+            } else {
+                newUrl.searchParams.delete('template');
+            }
+            window.history.replaceState({}, '', newUrl);
+        }
+    });
+</script>
