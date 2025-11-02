@@ -87,6 +87,9 @@ class UniFiTalkRepository {
         $("#provider-select").change((data) => {
             const value = data.target.value;
 
+            // Change current URL.
+            this.updateURL(value);
+
             this.renderTemplate(value);
         })
     }
@@ -327,6 +330,24 @@ class UniFiTalkRepository {
 
         // Print Debug Message.
         console.log(`Selected Template: ${template}.`);
+    }
+
+    /**
+     * Updates the URL in the browser's address bar by setting or updating the "template" query parameter with the provided value.
+     *
+     * @param {string} value - The value to set for the "template" query parameter in the URL.
+     * @return {void} This method does not return a value.
+     */
+    updateURL(value) {
+        // Create a URL object from the current page
+        const url = new URL(window.location);
+
+        // Set or update the "template" parameter
+        url.searchParams.set('template', value.replaceAll(".json", ""));
+
+        // Update the address bar (without reloading)
+        window.history.replaceState({}, '', url);
+
     }
 }
 
