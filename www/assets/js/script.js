@@ -26,7 +26,7 @@ class UniFiTalkRepository {
             // Push Template into Cache.
             this.cache.push({file: fileIO, data: data});
 
-            if (this.cache.length === this.needToLoad) {
+            if (this.cache.length === this.needToLoad && this.loadedCallback !== undefined) {
                 // Execute Callback if exists.
                 this.loadedCallback();
             }
@@ -356,9 +356,13 @@ class UniFiTalkRepository {
             }, '*');
 
         // Update the address bar (without reloading)
+
         window.history.replaceState({}, '', url);
 
+        // Print Debug Message.
+        console.log(`Updated URL: ${url.toString()}.`);
     }
+
 
 }
 
