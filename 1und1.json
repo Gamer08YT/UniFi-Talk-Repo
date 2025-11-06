@@ -1,0 +1,91 @@
+{
+  "name": "Deutsche Telekom - DeutschlandLAN",
+  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with DeutschlandLAN (Business) plan connections.",
+  "fields": [
+    {
+      "name": "ping",
+      "value": "10"
+    },
+    {
+      "name": "proxy",
+      "value": "sip.1und1.de"
+    },
+    {
+      "name": "realm",
+      "value": "1und1.de"
+    },
+    {
+      "name": "context",
+      "value": "public"
+    },
+    {
+      "name": "password",
+      "description": "<Telefoniepasswort>"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "description": "<Telefoniebenutzer, without +>"
+    },
+    {
+      "name": "sip-server",
+      "value": "sip.1und1.de"
+    },
+    {
+      "name": "from domain",
+      "value": "sip.1und1.de"
+    },
+    {
+      "name": "stun-server",
+      "value": "stun.1und1.de"
+    },
+    {
+      "name": "retry_seconds",
+      "value": 30
+    },
+    {
+      "name": "caller-id-type",
+      "value": "pid"
+    },
+    {
+      "name": "expire-seconds",
+      "value": 480
+    },
+    {
+      "name": "outbound-proxy",
+      "value": "sip.1und1.de"
+    },
+    {
+      "name": "stun-server-port",
+      "value": "3478"
+    },
+    {
+      "name": "caller-id-in-from",
+      "value": "true"
+    },
+    {
+      "name": "extension-in-contact",
+      "value": "true"
+    },
+    {
+      "name": "terminal-audio-rtp-port",
+      "value": "10000"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "implementation": {
+    "submitted": false
+  },
+  "meta": {
+    "author": "Thyrador",
+    "source": "https://community.ui.com/questions/SIP-configuration-in-Unifi-Talk-for-1und1-single-numbers-in-Germany/2002beef-0872-4899-bef0-14a179dcbdd7#answer/46b285b5-cf17-4275-a038-01b61bd66868"
+  }
+}
