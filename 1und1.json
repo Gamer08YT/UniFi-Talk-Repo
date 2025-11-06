@@ -1,6 +1,6 @@
 {
-  "name": "Deutsche Telekom - DeutschlandLAN",
-  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with DeutschlandLAN (Business) plan connections.",
+  "name": "1und1",
+  "description": "SIP template for 1und1.",
   "fields": [
     {
       "name": "ping",
