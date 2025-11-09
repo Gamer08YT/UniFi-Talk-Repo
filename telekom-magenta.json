@@ -46,7 +46,7 @@
     }
   ],
   "settings": {
-    "staticSignalingPort": true
+    "staticSignalingPort": false
   },
   "implementation": {
     "submitted": true,

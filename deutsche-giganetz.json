@@ -1,0 +1,39 @@
+{
+  "name": "Deutsche Giganetz",
+  "description": "SIP template for Deutsche Giganetz.",
+  "fields": [
+    {
+      "name": "realm",
+      "value": "tel.dgn.digital"
+    },
+    {
+      "name": "password",
+      "description": "Passwords are some Numbers at my Setup. You find it when you connect the WebUI of your default router, provided with your initial setup/connection."
+    },
+    {
+      "name": "username",
+      "description": "Username starts with tXXXXXXX at my Setup. You find it when you connect the the WebUI of your default router, provided with your initial setup/connection."
+    },
+    {
+      "name": "register",
+      "value": "true"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "185.39.86.104",
+      "cidr": "0"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false
+  },
+  "implementation": {
+    "submitted": true,
+    "implemented": false
+  },
+  "meta": {
+    "author": "JaXnPriVate",
+    "source": "https://ubiquiti-networks-forum.de/board/thread/12781-voip-unifi-talk-deutsche-giganetz/?postID=161087#post161087"
+  }
+}
