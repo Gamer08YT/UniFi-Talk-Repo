@@ -42,6 +42,52 @@
 
         <p>Select a template to view the configuration.</p><br>
 
+        <!-- START: Trial and Error -->
+        <p>
+            <button class="btn btn-success" type="button" data-bs-toggle="collapse" data-bs-target="#trial"
+                    aria-expanded="false" aria-controls="trial">
+                How to Trial and Error?
+            </button>
+        </p>
+        <div>
+            <div class="collapse" id="trial">
+                <div class="card card-body">
+                    <p>Unfortunately, only a very small part of the SIP protocol is standardized, and there are many
+                        standards, so virtually every provider does what they want.
+                        <br/>So even a single provider usually has several standards.</p>
+
+                    <h5>How to debug?</h5>
+
+                    <h6>Debugging telephony servers</h6>
+
+                    <p>
+                        However, it is possible to build a suitable template based on the log. To do this, you must log
+                        in to the console via SSH and attach to the telephony server (FreeSwitch) using the
+                        <code>fs_cli -r -R</code> command.
+                    </p>
+
+                    <p>
+                        It is important to note that in current Talk versions, the FreeSwitch server restarts every time
+                        a change is made, which means you will be logged out of the console.
+                    </p>
+
+                    <h6>Analyze SIP Frames</h6>
+
+                    <p>
+                        The <code>sngrep</code> tool is very useful for visualizing SIP frames. However, it is not
+                        installed on the console by default and can be installed with <code>apt install sngrep</code>.
+                    </p>
+
+                    <h5>Inbound Calls not working?</h5>
+                    <p>
+                        If inbound calls do not work, it is usually because the host name of the provider's telephony
+                        server is not whitelisted as an ACL.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- END: Trial and Error -->
+
         <!-- START: Contribute -->
         <p>
             <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#contribute"
