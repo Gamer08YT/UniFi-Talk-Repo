@@ -15,7 +15,7 @@
     },
     {
       "name": "username",
-      "description": "Username is <Area code> without + <Phone number>"
+      "description": "Username is <Area code> without + <Phone number> eq. 0XXXXXXXX"
     },
     {
       "name": "register-proxy",
