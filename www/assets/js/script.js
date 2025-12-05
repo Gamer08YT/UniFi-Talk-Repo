@@ -168,7 +168,7 @@ class UniFiTalkRepository {
             // Replace Meta Text if not undefined.
             if (data.meta != undefined) {
                 // Handle Template User Mention/Credits.
-                $("#mention").html("🎉 This template comes from " + data.meta.author + (data.meta.source !== undefined ? ", <a href='" + data.meta.source + "'>the original post can be found here.</a>" : "."));
+                $("#mention").html("🎉 This template comes from " + data.meta.author + (data.meta.source !== undefined ? ", <a target=\"_blank\" href='" + data.meta.source + "'>the original post can be found here.</a>" : "."));
             }
 
             // Show or hide Mention Alert based on Meta.
