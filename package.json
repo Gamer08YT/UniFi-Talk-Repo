@@ -1,0 +1,34 @@
+{
+  "name": "unifi-talk-repo",
+  "version": "1.0.0",
+  "description": "Unofficial UniFi Talk Custom Provider Repository.",
+  "keywords": [
+    "unifi",
+    "talk",
+    "freeswitch",
+    "voip",
+    "sip",
+    "softphone",
+    "trunk"
+  ],
+  "homepage": "https://github.com/Gamer08YT/UniFi-Talk-Repo#readme",
+  "bugs": {
+    "url": "https://github.com/Gamer08YT/UniFi-Talk-Repo/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gamer08YT/UniFi-Talk-Repo.git"
+  },
+  "license": "ISC",
+  "author": "Jan Heil (www.byte-store.de)",
+  "main": "Electron.js",
+  "scripts": {
+    "build": "tsc Electron.ts",
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^39.2.3",
+    "typescript": "^5.9.3",
+    "electron-builder": "^26.0.12"
+  }
+}
