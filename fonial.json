@@ -1,0 +1,102 @@
+{
+  "name": "Fonial ",
+  "description": "SIP template for Fonial.",
+  "fields": [
+    {
+      "name": "ping",
+      "value": "25"
+    },
+    {
+      "name": "realm",
+      "value": "sip.plusnet.de"
+    },
+    {
+      "name": "dtmfmode",
+      "value": "rfc2833",
+      "description": "Wichtig, damit Tastentöne richtig übertragen werden. Fonial macht das nur nach rfc2833."
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "description": "Username bspw. foXXXXXXXX_XX"
+    },
+    {
+      "name": "extension",
+      "value": "auto_to_user",
+      "description": "Wichtig, sonst sind eingehende Anrufe nicht möglich."
+    },
+    {
+      "name": "retry-seconds",
+      "value": "20",
+      "description": "Wenn der SIP Client sich anmeldet, fliegt er teilweise sonst laut Fonials Logging direkt wieder raus. Damit erzwingen wir reconnects."
+    },
+    {
+      "name": "register-proxy",
+      "value": "proxy01.sip.plusnet.de",
+      "description": "Beim Trunking ist es immer der proxy01. Bei den normalen Fonial SIP Anschlüssen (kein Trunking) bitte den Proxy beachten, welcher bei den SIP Zugangsdaten mit angegeben werden."
+    },
+    {
+      "name": "register-transport",
+      "value": "udp"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "92.197.176.16",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.176.17",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.176.18",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.176.19",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.177.16",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.177.17",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.177.18",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.177.19",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.182.16",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.182.17",
+      "cidr": "32"
+    },    {
+      "host": "92.197.182.18",
+      "cidr": "32"
+    },
+    {
+      "host": "92.197.182.19",
+      "cidr": "32"
+    }
+  ],
+  "meta": {
+    "author": "danir.de",
+    "source": "https://ubiquiti-networks-forum.de/board/thread/10764-unifi-talk-konfiguration-f%C3%BCr-fonial-sip/?postID=128282#post128282"
+  }
+}
