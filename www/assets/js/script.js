@@ -18,7 +18,7 @@ class UniFiTalkRepository {
             const data = JSON.parse(response);
 
             console.log(data);
-            if (data.name !== undefined) {
+            if (data.name !== undefined && fileIO !== "package.json") {
                 // Add Option to Select.
                 $("#provider-select").append(new Option(data.name, fileIO));
             }
