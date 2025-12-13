@@ -1,0 +1,35 @@
+{
+  "name": "O2",
+  "description": "SIP template for O2.",
+  "fields": [
+    {
+      "name": "username",
+      "description": "Username is <Area code> without + <Phone number> eq. 49XXXXXXXX"
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "proxy",
+      "value": "sip.alice-voip.de"
+    },
+    {
+      "name": "from-domain",
+      "value": "sip.alice-voip.de"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "62.52.0.0",
+      "cidr": "16"
+    },
+    {
+      "host": "62.53.0.0",
+      "cidr": "16"
+    }
+  ],
+  "meta": {
+    "author": "Apollon",
+    "source": "https://ubiquiti-networks-forum.de/board/thread/12114-o2-sip-mit-unifi-talk/?postID=154700#post154700"
+  }
+}
