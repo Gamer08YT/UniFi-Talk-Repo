@@ -48,6 +48,10 @@
       "cidr": "24"
     }
   ],
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
   "meta": {
     "author": "Battlecliff",
     "source": "https://community.ui.com/questions/EweTel-Sip-Unifi-Talk/b8f8f229-5861-47ff-b9cf-381959100ce7#answer/5f369d31-5bd2-47ae-840a-0579b2f4d4a6"

@@ -40,6 +40,10 @@
       "cidr": "0"
     }
   ],
+  "implementation": {
+    "submitted": true,
+    "implemented": false
+  },
   "meta": {
     "author": "venum-lk",
     "source": "https://ubiquiti-networks-forum.de/user/10383-venum-lk/"

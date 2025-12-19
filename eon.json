@@ -32,6 +32,10 @@
       "cidr": "32"
     }
   ],
+  "implementation": {
+    "submitted": true,
+    "implemented": false
+  },
   "meta": {
     "author": "Mr_Carnage_1977",
     "source": "https://community.ui.com/questions/UniFi-Talk-Template-Repository/4a8a2a4a-46d8-4794-b200-ace10862c944#answer/f476c02b-f415-4340-b687-e729803c4a7e"
