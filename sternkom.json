@@ -1,0 +1,47 @@
+{
+  "name": "SternKom",
+  "description": "SIP template for SternKom.",
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "voip.sternkom.de"
+    },
+    {
+      "name": "realm",
+      "value": "voip.sternkom.de"
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "username",
+      "description": "Username is <Area code> without + and without 49 <Phone number> eq. 0XXXXXXXX"
+    },
+    {
+      "name": "extension",
+      "value": ""
+    },
+    {
+      "name": "transport",
+      "value": "udp"
+    },
+    {
+      "name": "from-domain",
+      "value": "voip.sternkom.de"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "30"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "meta": {
+    "author": "venum-lk",
+    "source": "https://ubiquiti-networks-forum.de/user/10383-venum-lk/"
+  }
+}
