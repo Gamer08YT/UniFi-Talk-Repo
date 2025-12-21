@@ -15,6 +15,14 @@
       "description": "Username starts with tXXXXXXX at my Setup. You find it when you connect the the WebUI of your default router, provided with your initial setup/connection."
     },
     {
+      "name": "retry-seconds",
+      "value": "10"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "120"
+    },
+    {
       "name": "register",
       "value": "true"
     }
