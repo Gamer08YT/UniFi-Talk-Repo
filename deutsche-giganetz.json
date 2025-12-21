@@ -16,11 +16,11 @@
     },
     {
       "name": "retry-seconds",
-      "value": "10"
+      "value": "30"
     },
     {
       "name": "expire-seconds",
-      "value": "120"
+      "value": "600"
     },
     {
       "name": "register",
