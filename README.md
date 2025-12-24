@@ -34,5 +34,10 @@ Keep in mind that for this process we need your consent to test it on your side,
 
 ### As with all of my repositories, I would like to point out that I am in no way affiliated with Ubiquiti or UniFi.
 #### In this case, I will simply forward your templates and contact details to the correct address at Ubiquiti.
-#### When communicating via E-Mail, please ensure that you are using a valid and secure domain that is exclusively used by Ubiquiti. (@ui.com)
-#### When communicating via the forum, there is, unfortunately, no badge that verifies a team member. 
+#### If you need to invite the development team to your console, the current test account is a user account with a Ubiquiti email address: unifitalk@ui.com
+
+#### Via E-Mail
+When communicating via E-Mail, please ensure that you are using a valid and secure domain that is exclusively used by Ubiquiti. (@ui.com)
+
+#### Via Ubiquiti Forum 
+When communicating via the forum, there is, unfortunately, no badge that verifies a team member, so be careful. 
