@@ -25,6 +25,10 @@ Please provide as much information as possible.
 
 **_Please provide only working SIP Templates._**
 
+### Repo Template Guidelines
+
+To create an entry in the template list, please use the following [Template Format](./TEMPLATE.md)! 
+
 #### Implementation in UniFi Talk
 
 When you like, I can redirect the template to the official UniFi Talk Developer Team, wich will publish it.
