@@ -30,7 +30,9 @@
     "codec": "PCMA"
   },
   "implementation": {
-    "submitted": true
+    "submitted": true,
+    "implemented": true,
+    "version": "4.2.7"
   },
   "meta": {
     "author": "Mem",
