@@ -1,0 +1,87 @@
+{
+  "name": "GGEW.net Bergstraße",
+  "description": "SIP template for GGEW.net Glasfaser Bergstraße.",
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "sippur.ggew-net.de"
+    },
+    {
+      "name": "realm",
+      "value": "sippur.ggew-net.de"
+    },
+    {
+      "name": "domain",
+      "value": "sippur.ggew-net.de"
+    },  
+    {
+      "name": "username",
+      "description": "Username is 49 + <Area code> and <Phone number> eq. 4962512345. Can be found in your customer portal here: https://kundenportal.ggew-net.de/vertragsdaten/"
+    },
+    {
+      "name": "password"
+    },    
+    {
+      "name": "context",
+      "value": "public"
+    },
+    {
+      "name": "SIP-Port",
+      "value": "5060"
+    },
+    {
+      "name": "register",
+      "value": "truee"
+    },
+    {
+      "name": "registrar",
+      "value": "sippur.ggew-net.de"
+    },  
+    {
+      "name": "sip_cid_type",
+      "value": "rpd"
+    },
+    {
+      "name": "auth_username",
+      "description": "Same as 'username': Username is 49 + <Area code> and <Phone number> eq. 4962512345. Can be found in your customer portal here: https://kundenportal.ggew-net.de/vertragsdaten/"
+    },
+    {
+      "name": "inbound_proxy",
+      "value": "sippur.ggew-net.de"
+    },
+    {
+      "name": "retry_seconds",
+      "value": "10"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "180"
+    },
+    {
+      "name": "outbound_proxy",
+      "value": "0.0.0.0"
+    },
+    {
+      "name": "caller_id_in_from",
+      "value": "true"
+    },
+     {
+      "name": "register-transport",
+      "value": "tcp"
+    } 
+    ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "implementation": {
+    "submitted": true,
+    "implemented": false
+  },
+  "meta": {
+    "author": "venum-lk",
+    "source": "https://ubiquiti-networks-forum.de/user/10383-venum-lk/"
+  }
+}
