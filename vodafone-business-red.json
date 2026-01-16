@@ -1,0 +1,73 @@
+{
+  "name": "Vodafone Business Red",
+  "description": "SIP template for Vodafone Deutschland for Business Red Plans.",
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "egf03.fixed.vodafone.de",
+      "description": "Proxy is egf03.fixed.vodafone.de, may also contain other domains depending on location.."
+    },
+    {
+      "name": "realm",
+      "value": "fixed.vodafone.de"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "username",
+      "description": "Username is IMPI_XXXXXXXXX"
+    },
+    {
+      "name": "extension",
+      "value": "auto_to_user"
+    },
+    {
+      "name": "from-user",
+      "value": "+49XXXXXXXXXX",
+      "description": "Your Phone Number with +49 prefix."
+    },
+    {
+      "name": "from-domain",
+      "value": "fixed.vodafone.de"
+    },
+    {
+      "name": "auth_username",
+      "description": "Same as 'username': Username is IMPI_XXXXXXXXX"
+    },
+    {
+      "name": "retry-seconds",
+      "value": "30"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "600"
+    },
+    {
+      "name": "extension-in-contact",
+      "value": "true"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false,
+    "codec": "PCMA"
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "Nudelsalad",
+    "source": "https://github.com/Gamer08YT/UniFi-Talk-Repo/issues/2"
+  }
+}
