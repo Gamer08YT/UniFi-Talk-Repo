@@ -72,6 +72,10 @@
   "implementation": {
     "submitted": false
   },
+  "more": {
+    "deprecated": true,
+    "reason": "Will be migrated to Company Flex at the End of 2026!"
+  },
   "meta": {
     "author": "folkewallrodt",
     "source": "https://community.ui.com/questions/Unifi-Talk-Profile-Telekom-DeutschlandLAN-SIP-Trunk/f5147264-710b-45a9-b278-276e98a0455e"
