@@ -5,6 +5,16 @@ https://gamer08yt.github.io/UniFi-Talk-Repo/
 
 ![img.png](www/assets/media/img/img.png)
 
+## Info
+
+The templates listed here have not been tested and may not work under certain circumstances.
+
+In addition, they may differ from implemented templates; these are the initial templates that have been/are being submitted to Ubiquiti.
+
+I welcome any feedback, as this will enable us to weed out templates that do not work or divide them into the respective contracts.
+
+The more information you can provide about your connection (double NAT, contract, etc.), the better!
+
 ## Contributing
 
 Feel free to contribute, every help is appreciated!
@@ -45,3 +55,8 @@ When communicating via E-Mail, please ensure that you are using a valid and secu
 
 #### Via Ubiquiti Forum 
 When communicating via the forum, there is, unfortunately, no badge that verifies a team member, so be careful. 
+
+
+## Disclaimer
+#### I accept no liability for damage, data loss or other problems. 
+#### Backups should always be made before accessing Ubiquiti remotely, as the custom firmware versions are dev previews that may contain errors.
