@@ -1,6 +1,14 @@
 {
   "name": "Deutsche Giganetz",
   "description": "SIP template for Deutsche Giganetz.",
+  "tests": [
+    {
+      "name": "MyNet 1000",
+      "tester": "JaXnPriVate",
+      "working": true,
+      "doubleNat": false
+    }
+  ],
   "fields": [
     {
       "name": "realm",
