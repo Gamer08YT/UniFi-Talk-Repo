@@ -15,6 +15,11 @@ I welcome any feedback, as this will enable us to weed out templates that do not
 
 The more information you can provide about your connection (double NAT, contract, etc.), the better!
 
+## Deprecated Telefonie Services
+
+- DeutschlandLAN -> Will be migrated to Company Flex at the End of 2026!
+
+
 ## Contributing
 
 Feel free to contribute, every help is appreciated!
@@ -60,3 +65,4 @@ When communicating via the forum, there is, unfortunately, no badge that verifie
 ## Disclaimer
 #### I accept no liability for damage, data loss or other problems. 
 #### Backups should always be made before accessing Ubiquiti remotely, as the custom firmware versions are dev previews that may contain errors.
+#### Participation is at your own risk!
