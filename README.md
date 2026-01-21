@@ -17,7 +17,8 @@ The more information you can provide about your connection (double NAT, contract
 
 ## Deprecated Telefonie Services
 
-- DeutschlandLAN -> Will be migrated to Company Flex at the End of 2026!
+- Telekom:
+  - DeutschlandLAN -> Will be migrated to Company Flex at the End of 2026!
 
 
 ## Contributing
