@@ -34,7 +34,8 @@
   ],
   "implementation": {
     "submitted": true,
-    "implemented": false
+    "implemented": true,
+    "since": "5.0.1"
   },
   "meta": {
     "author": "Mr_Carnage_1977",
