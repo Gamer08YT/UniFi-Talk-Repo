@@ -7,6 +7,12 @@
       "tester": "JaXnPriVate",
       "working": true,
       "doubleNat": false
+    },
+    {
+      "name": "ProNet",
+      "tester": "Madlax",
+      "working": true,
+      "doubleNat": true
     }
   ],
   "fields": [
