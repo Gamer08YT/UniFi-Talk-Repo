@@ -10,6 +10,9 @@ Each template file is a JSON object with the following (typical) top-level prope
 - `description` *(string)*  
   Short description/purpose of the template.
 
+- `tests` *(Array<object>)*  
+  Community test results / real-world reports for this template.
+
 - `fields` *(Array<object>)*  
   List of configurable input fields/parameters.
 
@@ -37,6 +40,25 @@ Each entry in `fields` is an object with:
 
 - `description` *(string, optional)*  
   Help text describing expected input/format.
+
+## `tests` structure
+
+Each entry in `tests` is an object with (typical) fields like:
+
+- `name` *(string, required)*  
+  Name/label of the test setup (e.g., tariff/product name).
+
+- `plan` *(string, optional)*  
+  Plan/speed or product variant identifier.
+
+- `tester` *(string, optional)*  
+  Who performed the test.
+
+- `working` *(boolean, required)*  
+  Whether the setup worked.
+
+- `doubleNat` *(boolean, optional)*  
+  Whether the setup was behind double NAT.
 
 ## `aclWhitelist` structure
 
