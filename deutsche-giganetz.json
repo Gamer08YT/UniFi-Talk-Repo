@@ -3,13 +3,15 @@
   "description": "SIP template for Deutsche Giganetz.",
   "tests": [
     {
-      "name": "MyNet 1000",
+      "name": "MyNet",
+      "plan": "1000",
       "tester": "JaXnPriVate",
       "working": true,
       "doubleNat": false
     },
     {
       "name": "ProNet",
+      "plan": "",
       "tester": "Madlax",
       "working": true,
       "doubleNat": true

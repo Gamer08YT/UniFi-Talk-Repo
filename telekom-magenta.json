@@ -3,7 +3,8 @@
   "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with Magenta plan connections.",
   "tests": [
     {
-      "name": "Magenta Home - VDSL 100",
+      "name": "Magenta Home",
+      "plan": "VDSL 100",
       "tester": "JaXnPriVate",
       "working": true,
       "doubleNat": false
