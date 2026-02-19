@@ -133,7 +133,7 @@ class UniFiTalkRepository {
                     "    <tr>\n" +
                     "      <th scope=\"col\">Type</th>\n" +
                     "      <th scope=\"col\">Double NAT</th>\n" +
-                    "      <th scope=\"col\">Double Tester</th>\n" +
+                    "      <th scope=\"col\">Tester</th>\n" +
                     "    </tr>\n" +
                     "  </thead>\n" +
                     "  <tbody>";
