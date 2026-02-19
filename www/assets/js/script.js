@@ -128,7 +128,7 @@ class UniFiTalkRepository {
                 $("#notes").css("display", "block");
 
                 const object = $("<div>The template has been confirmed to work for the following contracts: <br/><br/></div>")
-                let tableObject = "<table class=\"table\">\n" +
+                let tableObject = "<table class=\"table table-dark\">\n" +
                     "  <thead>\n" +
                     "    <tr>\n" +
                     "      <th scope=\"col\">Type</th>\n" +
@@ -142,7 +142,9 @@ class UniFiTalkRepository {
                 data.tests.forEach(element => {
                     // Only show working contracts.
                     if (element.working !== undefined && element.working) {
-                        tableObject += "<tr><td>" + element.name + "</td><td>" + element.doubleNat + "</td><td>" + element.tester + "</td></tr>"
+                        if (element.name !== undefined && element.doubleNat !== undefined && element.tester !== undefined) {
+                            tableObject += "<tr><td>" + element.name + "</td><td>" + element.doubleNat + "</td><td>" + element.tester + "</td></tr>"
+                        }
                     }
                 });
 
