@@ -123,6 +123,39 @@ class UniFiTalkRepository {
                 }
             }
 
+            // Set Template Tests Alert if Implemented.
+            if (data.tests !== undefined) {
+                $("#notes").css("display", "block");
+
+                const object = $("<div>The template has been confirmed to work for the following contracts: <br/><br/></div>")
+                let tableObject = "<table class=\"table\">\n" +
+                    "  <thead>\n" +
+                    "    <tr>\n" +
+                    "      <th scope=\"col\">Type</th>\n" +
+                    "      <th scope=\"col\">Double NAT</th>\n" +
+                    "      <th scope=\"col\">Double Tester</th>\n" +
+                    "    </tr>\n" +
+                    "  </thead>\n" +
+                    "  <tbody>";
+
+                // Add Table.
+                data.tests.forEach(element => {
+                    // Only show working contracts.
+                    if (element.working !== undefined && element.working) {
+                        tableObject += "<tr><td>" + element.name + "</td><td>" + element.doubleNat + "</td><td>" + element.tester + "</td></tr>"
+                    }
+                });
+
+                tableObject += "</tbody>\n" +
+                    "</table>";
+
+                object.append(tableObject);
+
+                $("#notes").append(object);
+            } else {
+                $("#notes").css("display", "none");
+            }
+
             // Set Settings.
             if (data.settings !== undefined) {
                 if (data.settings.staticSignalingPort !== undefined) {
