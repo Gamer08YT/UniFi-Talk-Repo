@@ -15,6 +15,7 @@ I welcome any feedback, as this will enable us to weed out templates that do not
 
 The more information you can provide about your connection (double NAT, contract, etc.), the better!
 
+
 ## Deprecated Telefonie Services
 
 - Telekom:
