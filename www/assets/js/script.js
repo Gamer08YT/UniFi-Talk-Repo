@@ -153,6 +153,10 @@ class UniFiTalkRepository {
 
                 object.append(tableObject);
 
+                // First clear old Notes.
+                $("#notes").html("");
+
+                // Add Notes.
                 $("#notes").append(object);
             } else {
                 $("#notes").css("display", "none");
