@@ -1,6 +1,15 @@
 {
   "name": "Vodafone Business Red",
   "description": "SIP template for Vodafone Deutschland for Business Red Plans.",
+  "tests": [
+    {
+      "name": "Cable",
+      "plan": "",
+      "tester": "Nutzer666",
+      "working": true,
+      "doubleNat": false
+    }
+  ],
   "fields": [
     {
       "name": "proxy",
@@ -63,7 +72,7 @@
     "codec": "PCMA"
   },
   "implementation": {
-    "submitted": false,
+    "submitted": true,
     "implemented": false
   },
   "meta": {
