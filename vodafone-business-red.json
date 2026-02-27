@@ -1,6 +1,6 @@
 {
-  "name": "Vodafone Business Red",
-  "description": "SIP template for Vodafone Deutschland for Business Red Plans.",
+  "name": "Vodafone Business",
+  "description": "SIP template for Vodafone Deutschland for Business Plans.",
   "tests": [
     {
       "name": "Cable",
