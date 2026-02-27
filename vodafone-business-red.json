@@ -7,14 +7,16 @@
       "plan": "",
       "tester": "Nutzer666",
       "working": true,
-      "doubleNat": false
+      "doubleNat": false,
+      "source": "PM"
     },
     {
       "name": "Red Business",
       "plan": "Internet & Phone 500",
       "tester": "Nudelsalad",
       "working": true,
-      "doubleNat": false
+      "doubleNat": false,
+      "source": "https://github.com/Gamer08YT/UniFi-Talk-Repo/issues/2"
     }
   ],
   "fields": [
