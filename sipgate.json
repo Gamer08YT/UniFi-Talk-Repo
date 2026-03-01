@@ -1,0 +1,96 @@
+{
+  "name": "sipgate",
+  "description": "SIP template for Sipgate.",
+  "tests": [
+    {
+      "name": "Sipgate Business",
+      "plan": "",
+      "tester": "nights",
+      "working": true,
+      "doubleNat": false
+    },
+    {
+      "name": "Sipgate Business",
+      "plan": "",
+      "tester": "pixelbrain",
+      "working": true,
+      "doubleNat": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "ping",
+      "value": 25
+    },
+    {
+      "name": "proxy",
+      "value": "sipgate.de"
+    },
+    {
+      "name": "context",
+      "description": "public"
+    },
+    {
+      "name": "password"
+    },
+    {
+      "name": "username",
+      "description": "Username is SIP-ID"
+    },
+    {
+      "name": "extension",
+      "description": "Extension is SIP-ID"
+    },
+    {
+      "name": "from-user",
+      "description": "From User is SIP-ID"
+    },
+    {
+      "name": "registrar",
+      "value": "sipgate.de"
+    },
+    {
+      "name": "from-domain",
+      "value": "sipgate.de"
+    },
+    {
+      "name": "SIP_CID_type",
+      "value": "RPD"
+    },
+    {
+      "name": "auth-username",
+      "description": "Auth Username is SIP-ID"
+    },
+    {
+      "name": "outbound-proxy",
+      "value": "sipgate.de"
+    },
+    {
+      "name": "register-proxy",
+      "value": "sipgate.de"
+    },
+    {
+      "name": "register-transport",
+      "value": "udp"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false,
+    "codec": "PCMA"
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false,
+    "version": ""
+  },
+  "meta": {
+    "author": "nights",
+    "source": "https://ubiquiti-networks-forum.de/board/thread/4957-lokaler-pbx-oder-sipgate-als-unifi-talk-third-party-sip-provider/?postID=158436#post158436"
+  }
+}
