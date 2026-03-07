@@ -119,7 +119,7 @@ class UniFiTalkRepository {
 
             // Set New Title.
             if (template !== "None") {
-                window.document.title = data.name + " - UniFi Talk Repository";
+                this.setSEO(data.name + " - UniFi Talk Repository");
             }
 
             // Show Template Settings.
@@ -233,8 +233,8 @@ class UniFiTalkRepository {
             // Hide Description Field.
             $("#provider-description").css("display", "none");
 
-            // Reset Title.
-            window.document.title = "UniFi Talk Repository";
+            // Reset SEO.
+            this.setSEO("UniFi Talk Repository");
         }
 
     }
@@ -419,6 +419,21 @@ class UniFiTalkRepository {
     }
 
 
+    /**
+     * Updates the SEO properties for the webpage, including the document title
+     * and Open Graph title metadata, based on the specified template name.
+     *
+     * @param {string} templateName - The name of the template to use in the SEO properties.
+     * @return {void} This method does not return a value.
+     */
+    setSEO(templateName) {
+        // Reset Title.
+        window.document.title = templateName;
+
+        // Für Open Graph:
+        const ogTitle = document.querySelector("meta[property='og:title']");
+        ogTitle.setAttribute("content", templateName);
+    }
 }
 
 // Wait until document is ready.
