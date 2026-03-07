@@ -78,7 +78,12 @@ class UniFiTalkRepository {
     }
 
     /**
-     **/
+     * Registers event listeners for UI elements.
+     * Specifically, attaches a change event listener to the element with the ID "provider-select".
+     * When the event is triggered, the current URL is updated, and a corresponding template is rendered.
+     *
+     * @return {void} This method does not return a value.
+     */
     registerListeners() {
         $("#provider-select").change((data) => {
             const value = data.target.value;
@@ -86,6 +91,7 @@ class UniFiTalkRepository {
             // Change current URL.
             this.updateURL(value);
 
+            // Render Template.
             this.renderTemplate(value);
         })
     }
@@ -395,6 +401,13 @@ class UniFiTalkRepository {
             }, '*');
 
             console.log("Published Template to Parent Window.");
+        }
+
+        // Set New Title.
+        if (template !== "None") {
+            window.document.title = template + " - UniFi Talk Repository";
+        } else {
+            window.document.title = "UniFi Talk Repository";
         }
 
         // Update the address bar (without reloading)
