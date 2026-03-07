@@ -117,6 +117,11 @@ class UniFiTalkRepository {
         if (template !== undefined) {
             const data = template.data;
 
+            // Set New Title.
+            if (template !== "None") {
+                window.document.title = data.name + " - UniFi Talk Repository";
+            }
+
             // Show Template Settings.
             $("#template-settings").css("display", "block");
 
@@ -227,6 +232,9 @@ class UniFiTalkRepository {
 
             // Hide Description Field.
             $("#provider-description").css("display", "none");
+
+            // Reset Title.
+            window.document.title = "UniFi Talk Repository";
         }
 
     }
@@ -401,13 +409,6 @@ class UniFiTalkRepository {
             }, '*');
 
             console.log("Published Template to Parent Window.");
-        }
-
-        // Set New Title.
-        if (template !== "None") {
-            window.document.title = template + " - UniFi Talk Repository";
-        } else {
-            window.document.title = "UniFi Talk Repository";
         }
 
         // Update the address bar (without reloading)
