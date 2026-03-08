@@ -1,0 +1,68 @@
+{
+  "name": "VoIPtalk",
+  "description": "SIP template for VoIPtalk UK.",
+  "fields": [
+    {
+      "name": "ping",
+      "value": "25"
+    },
+    {
+      "name": "port",
+      "value": "5060"
+    },
+    {
+      "name": "proxy",
+      "value": "voiptalk.org"
+    },
+    {
+      "name": "realm",
+      "value": "voiptalk.org"
+    },
+    {
+      "name": "password",
+      "description": "SIP Trunk Password"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "description": "SIP Trunk ID"
+    },
+    {
+      "name": "from-user",
+      "description": "SIP Trunk ID"
+    },
+    {
+      "name": "from-domain",
+      "value": "voiptalk.org"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "600"
+    },
+    {
+      "name": "register-proxy",
+      "value": "voiptalk.org"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "77.240.48.94",
+      "cidr": "32"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false,
+    "codec": "PCMA"
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "TonyJr",
+    "source": "https://community.ui.com/questions/Working-SIP-Settings-for-UK-VoIPtalk/75bc43ed-de66-4637-944d-e50229deb29e"
+  }
+}
