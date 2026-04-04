@@ -1,6 +1,6 @@
 {
   "name": "VoIPtalk",
-  "description": "SIP template for VoIPtalk UK.",
+  "description": "SIP template for VoIPtalk.",
   "fields": [
     {
       "name": "ping",

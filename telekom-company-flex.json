@@ -1,0 +1,87 @@
+{
+  "name": "Deutsche Telekom - Company Flex",
+  "description": "SIP template for Deutsche Telekom AG VOIP telephone connections with Company Flex (Business) plan connections.",
+  "fields": [
+    {
+      "name": "realm",
+      "value": "tel.t-online.de"
+    },
+    {
+      "name": "password",
+      "description": "<Telefoniepasswort>"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "username",
+      "description": "<Telefoniebenutzer, it is a 12 digit number>"
+    },
+    {
+      "name": "from-user",
+      "description": "Phone number to be used (+49...)"
+    },
+    {
+      "name": "from-domain",
+      "value": "tel.t-online.de"
+    },
+    {
+      "name": "auth-user",
+      "description": "Phone number to be used (+49...)@tel.t-online.de"
+    },
+    {
+      "name": "retry-seconds",
+      "value": 30
+    },
+    {
+      "name": "caller-id-type",
+      "value": "pid"
+    },
+    {
+      "name": "outbound-proxy",
+      "value": "55XXXXXXXXXX.primary.companyflex.de"
+    },
+    {
+      "name": "register-proxy",
+      "value": "55XXXXXXXXXX.primary.companyflex.de"
+    },
+    {
+      "name": "caller-id-in-from",
+      "value": "true"
+    },
+    {
+      "name": "register-transport",
+      "value": "tcp"
+    },
+    {
+      "name": "extension-in-contact",
+      "value": "true"
+    },
+    {
+      "name": "expire-seconds",
+      "value": 600
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "217.0.0.0",
+      "cidr": "16"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": true,
+    "codec": "PCMA"
+  },
+  "implementation": {
+    "submitted": true
+  },
+  "more": {
+    "deprecated": false,
+    "reason": ""
+  },
+  "meta": {
+    "author": "TommyCGN",
+    "source": "https://community.ui.com/questions/UniFi-Talk-Telekom-CompanyFlex-SIP-Trunk-working-configuration/111c8e56-75ef-4de0-b4c7-3f8e183746bc"
+  }
+}
