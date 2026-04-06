@@ -1,8 +1,6 @@
 {
   "name": "Deutsche Glasfaser",
   "description": "SIP template for Deutsche Glasfaser.",
-  "tests": [
-  ],
   "fields": [
     {
       "name": "proxy",
