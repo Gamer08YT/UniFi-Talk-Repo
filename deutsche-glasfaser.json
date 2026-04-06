@@ -1,0 +1,61 @@
+{
+  "name": "Deutsche Glasfaser",
+  "description": "SIP template for Deutsche Glasfaser.",
+  "tests": [
+  ],
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "dg.voip.dg-w.de"
+    },
+    {
+      "name": "realm",
+      "value": "dg.voip.dg-w.de"
+    },
+    {
+      "name": "context",
+      "value": "public"
+    },
+    {
+      "name": "auth-username",
+      "description": "Can be found in your Registration Letter."
+    },
+    {
+      "name": "password",
+      "description": "Can be found in your Registration Letter."
+    },
+    {
+      "name": "username",
+      "description": "Phone number to be used (0681...)"
+    },
+    {
+      "name": "from-domain",
+      "value": "dg.voip.dg-w.de"
+    },
+    {
+      "name": "retry-seconds",
+      "value": 30
+    },
+    {
+      "name": "expire-seconds",
+      "value": 480
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "185.22.44.186",
+      "cidr": "32"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "PatrickMattfeldt",
+    "source": "https://community.ui.com/questions/SIP-calling-with-Deutsche-Glasfaser-Registration-works-with-Talk/b29ce40a-45c3-40bb-a3c0-684fee48a0f0"
+  }
+}
