@@ -1,0 +1,50 @@
+{
+  "name": "OVH",
+  "description": "SIP template for OVH Telecom (OVHcloud). The SIP server is country-specific - use the host shown in your OVH VoIP interface (e.g. sip3.ovh.ch for CH, sbc6.fr.sip.ovh for FR).",
+  "tests": [
+    {
+      "name": "OVH Suisse",
+      "plan": "sip3.ovh.ch",
+      "tester": "BenJule",
+      "working": true,
+      "doubleNat": false
+    },
+    {
+      "name": "OVH France",
+      "plan": "sbc6.fr.sip.ovh",
+      "tester": "BenJule",
+      "working": true,
+      "doubleNat": false
+    }
+  ],
+  "fields": [
+    { "name": "ping", "value": 25 },
+    { "name": "proxy", "description": "OVH SIP server, country-specific (e.g. sip3.ovh.ch / sbc6.fr.sip.ovh) - see your OVH interface" },
+    { "name": "context", "description": "public" },
+    { "name": "password", "description": "OVH SIP password" },
+    { "name": "username", "description": "Username is the OVH login (the full number, e.g. 0041... / 0033...)" },
+    { "name": "extension", "description": "Extension is the OVH login" },
+    { "name": "from-user", "description": "From User is the OVH login" },
+    { "name": "registrar", "description": "Same host as proxy" },
+    { "name": "from-domain", "description": "Same host as proxy" },
+    { "name": "auth-username", "description": "Auth Username is the OVH login" },
+    { "name": "outbound-proxy", "description": "Same host as proxy" },
+    { "name": "register-proxy", "description": "Same host as proxy" },
+    { "name": "register-transport", "value": "udp" }
+  ],
+  "aclWhitelist": [
+    { "host": "0.0.0.0", "cidr": "0" }
+  ],
+  "settings": {
+    "staticSignalingPort": false,
+    "codec": "PCMA"
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "BenJule",
+    "source": ""
+  }
+}
