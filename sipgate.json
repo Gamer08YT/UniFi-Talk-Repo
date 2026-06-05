@@ -85,9 +85,9 @@
     "codec": "PCMA"
   },
   "implementation": {
-    "submitted": false,
-    "implemented": false,
-    "version": ""
+    "submitted": true,
+    "implemented": true,
+    "version": "5.2.5"
   },
   "meta": {
     "author": "nights",

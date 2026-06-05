@@ -54,7 +54,8 @@
   },
   "implementation": {
     "submitted": true,
-    "implemented": false
+    "implemented": true,
+    "version": "5.2.5"
   },
   "meta": {
     "author": "JaXnPriVate",
