@@ -1,0 +1,68 @@
+{
+  "name": "Telxi UniFi Talk",
+  "description": "SIP template for Telxi SIP Trunk.",
+  "fields": [
+    {
+      "name": "port",
+      "value": "5060"
+    },
+    {
+      "name": "realm",
+      "value": "sip.telxi.com"
+    },
+    {
+      "name": "proxy",
+      "value": "sip.telxi.com"
+    },  
+    {
+      "name": "username",
+      "description": "Username is Trunk name, check in Telxi portal"
+    },
+    {
+      "name": "password"
+      "description": "Password for trunk, check in Telxi portal"
+    },    
+    {
+      "name": "register",
+      "value": "true"
+    },
+    {
+      "name": "extension",
+      "value": "auto_to_user"
+    },
+    {
+      "name": "from-domain",
+      "value": "sip.telxi.com"
+    },
+    {
+      "name": "auth-username",
+      "value": "Username is Trunk name, check in Telxi portal"
+    },  
+    {
+      "name": "retry-seconds",
+      "value": "30"
+    },
+    {
+      "name": "register-proxy",
+      "value": "sip.telxi.com"
+    },
+    {
+      "name": "register-transport",
+      "value": "udp"
+    } 
+    ],
+  "aclWhitelist": [
+    {
+      "host": "0.0.0.0",
+      "cidr": "0"
+    }
+  ],
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "mamqa",
+    "source": "https://github.com/mamqa/UniFi-Talk-Repo/"
+  }
+}
