@@ -13,15 +13,15 @@
     {
       "name": "proxy",
       "value": "sip.telxi.com"
-    },  
+    },
     {
       "name": "username",
       "description": "Username is Trunk name, check in Telxi portal"
     },
     {
-      "name": "password"
+      "name": "password",
       "description": "Password for trunk, check in Telxi portal"
-    },    
+    },
     {
       "name": "register",
       "value": "true"
@@ -37,7 +37,7 @@
     {
       "name": "auth-username",
       "value": "Username is Trunk name, check in Telxi portal"
-    },  
+    },
     {
       "name": "retry-seconds",
       "value": "30"
@@ -49,8 +49,8 @@
     {
       "name": "register-transport",
       "value": "udp"
-    } 
-    ],
+    }
+  ],
   "aclWhitelist": [
     {
       "host": "0.0.0.0",
