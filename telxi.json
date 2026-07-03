@@ -31,22 +31,6 @@
       "value": "auto_to_user"
     },
     {
-      "name": "from-domain",
-      "value": "sip.telxi.com"
-    },
-    {
-      "name": "auth-username",
-      "value": "Username is Trunk name, check in Telxi portal"
-    },
-    {
-      "name": "retry-seconds",
-      "value": "30"
-    },
-    {
-      "name": "register-proxy",
-      "value": "sip.telxi.com"
-    },
-    {
       "name": "register-transport",
       "value": "udp"
     }
@@ -54,7 +38,7 @@
   "aclWhitelist": [
     {
       "host": "0.0.0.0",
-      "cidr": "0"
+      "cidr": "32"
     }
   ],
   "implementation": {
