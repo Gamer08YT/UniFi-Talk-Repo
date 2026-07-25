@@ -11,7 +11,7 @@ If Ubiquiti implements this feature, it would allow UniFi Talk to directly impor
 
 Ubiquiti prioritizes feature requests based on community engagement, so every Like helps increase visibility and priority.
 
-[👉 If you want to see JSON template imports in UniFi Talk, please consider liking the request.]([https://community.ui.com/questions/Feature-request---Importing-templates-for-Talk-3rd-party-providers/dfe096f2-bd03-448e-87a5-4aae6adb7ad0])
+[👉 If you want to see JSON template imports in UniFi Talk, please consider liking the request.](https://community.ui.com/questions/Feature-request---Importing-templates-for-Talk-3rd-party-providers/dfe096f2-bd03-448e-87a5-4aae6adb7ad0)
 
 
 
