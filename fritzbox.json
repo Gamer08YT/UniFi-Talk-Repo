@@ -11,7 +11,7 @@
     },
     {
       "name": "password",
-      "description": "Passwords is your created SIP Password in the Fritzbox Web UI."
+      "description": "Password is your created SIP Password in the Fritzbox Web UI."
     },
     {
       "name": "username",
