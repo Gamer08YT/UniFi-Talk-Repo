@@ -1,0 +1,63 @@
+{
+  "name": "FritzBox",
+  "description": "SIP template for AVM Fritzbox Routers.",
+  "tests": [
+  ],
+  "fields": [
+    {
+      "name": "proxy",
+      "value": "XXX.XXX.XXX.XXX:5060",
+      "description": "Fritzbox Subnet + Port"
+    },
+    {
+      "name": "password",
+      "description": "Passwords is your created SIP Password in the Fritzbox Web UI."
+    },
+    {
+      "name": "username",
+      "description": "Username is your created SIP User in the FritzBox Web UI."
+    },
+    {
+      "name": "transport",
+      "value": "UDP"
+    },
+    {
+      "name": "expire-seconds",
+      "value": "300"
+    },
+    {
+      "name": "from-domain",
+      "value": "XXX.XXX.XXX.XXX",
+      "description": "The IP Address of your Fritzbox."
+    },
+    {
+      "name": "keepalive",
+      "value": "0"
+    },
+    {
+      "name": "contact-host",
+      "value": "sip-ip"
+    },
+    {
+      "name": "register",
+      "value": "true"
+    }
+  ],
+  "aclWhitelist": [
+    {
+      "host": "XXX.XXX.XXX.XXX",
+      "cidr": "32"
+    }
+  ],
+  "settings": {
+    "staticSignalingPort": false
+  },
+  "implementation": {
+    "submitted": false,
+    "implemented": false
+  },
+  "meta": {
+    "author": "nilsplodek",
+    "source": "https://community.ui.com/questions/9e569b34-774c-451d-a6de-d70ca3f6a6a6?replyId=9df9e1e3-78e0-4ed9-8522-ef3be023b4e6"
+  }
+}
