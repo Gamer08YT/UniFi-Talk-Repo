@@ -1,8 +1,6 @@
 {
   "name": "FritzBox",
   "description": "SIP template for AVM Fritzbox Routers.",
-  "tests": [
-  ],
   "fields": [
     {
       "name": "proxy",
